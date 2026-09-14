@@ -1,36 +1,44 @@
+// Andrew
+// CIS 5 - Week 3 Homework - Types & Variables
+
 #include <iostream>
 #include <string>
-
-// Homework 3 — Your Name
-// CIS 5 Week 03 · Types & variables
+using namespace std;
 
 int main() {
-  const int CURRENT_YEAR = 2026;
+    string name = "Andrew";
+    int age = 17;
+    double height_m = 1.75;
+    char initial = 'A';
+    bool student = true;
+    const int CURRENT_YEAR = 2026;
 
-  // TODO: Lab 3 boxes — initialize on the same line
-  // std::string name = ...;
-  // int age = ...;
-  // double height_m = ...;
-  // char initial = ...;
-  // bool student = ...;
+    // credits is an int because you can't register for a fraction of a credit —
+    // the number of credits is always a whole number
+    int credits = 12;
 
-  // TODO: two more from this week's menu
-  // int credits = ...;
-  // double gpa = ...;
+    // gpa is a double because grade point averages need decimal precision
+    // (e.g. 3.8), not just whole numbers
+    double gpa = 3.8;
 
-  // TODO: a comment that explains a type choice (why int, why double, or why const)
+    // credits started at 12. I changed it to 13. The paragraph now says 13
+    // because cout prints credits, not a leftover 12 in quotes.
+    credits = 13;
 
-  std::cout << "=== About me ===\n";
-  // TODO: labeled lines from the names
-  // TODO: one short paragraph from those same names — not leftover quotes
+    cout << "=== About me ===" << endl;
+    cout << "Name: " << name << endl;
+    cout << "Age: " << age << endl;
+    cout << "Credits: " << credits << endl;
+    cout << "GPA: " << gpa << endl;
+    cout << "Year: " << CURRENT_YEAR << endl;
+    cout << endl;
 
-  // TODO: change one value from a first choice. Comment the old value,
-  // the new value, and why the console followed.
+    cout << name << " is " << age << ", taking " << credits
+         << " credits in " << CURRENT_YEAR << ", with a " << gpa
+         << " GPA." << endl;
 
-  // TODO: two lines that would not compile — leave them commented
-  // Example shape (write your own, with the reason):
-  // int age = "nineteen";   // would not compile — ...
-  // CURRENT_YEAR = 2027;    // would not compile — ...
+    // int age2 = "seventeen";   // would not compile — a string does not fit in an int
+    // CURRENT_YEAR = 2027;      // would not compile — const cannot be assigned again
 
-  return 0;
+    return 0;
 }
